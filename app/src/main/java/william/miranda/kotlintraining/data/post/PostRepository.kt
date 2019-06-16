@@ -21,9 +21,9 @@ object PostRepository {
     /**
      * Expose all saved Posts to upper layers
      */
-    fun getAll(): List<Post> {
+    fun getAll(callback: (List<Post>) -> Unit): List<Post> {
         //Fetch information from the API
-        var postsFromApi = postApi.getAllPosts().enqueue(
+        postApi.getAllPosts().enqueue(
             object : Callback<List<Post>> {
 
                 override fun onFailure(call: Call<List<Post>>, t: Throwable) {
@@ -34,7 +34,11 @@ object PostRepository {
                     //If got something valid, save locally
                     if (response.isSuccessful) {
                         response.body()?.let {
+                            //Cannot use the Database on Main thread
                             CoroutineScope(Dispatchers.IO).launch { postDao.insert(it) }
+
+                            //In here, we may want to notify the UI about the new Data
+                            callback(it)
                         }
                     }
                 }

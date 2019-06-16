@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
      */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         context?.let {
-            recyclerView.apply {
+            recyclerView?.apply {
                 val manager = LinearLayoutManager(it)
                 layoutManager = manager
                 addItemDecoration(DividerItemDecoration(it, manager.orientation))
@@ -50,6 +50,6 @@ class HomeFragment : Fragment() {
      * Update the Adapter with new Data
      */
     fun updatePosts(posts: List<Post>) {
-        (recyclerView.adapter as PostAdapter).swap(posts)
+        (recyclerView?.adapter as PostAdapter).swap(posts)
     }
 }
