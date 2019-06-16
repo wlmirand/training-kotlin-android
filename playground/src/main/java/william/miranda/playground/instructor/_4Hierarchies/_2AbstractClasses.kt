@@ -11,10 +11,10 @@ abstract class StoredEntity {
 }
 
 class Employee : StoredEntity() {
+    //Mandatory to implement all abstract methods
     override fun store() {
-        throw UnsupportedOperationException("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
+    }
 }
 
 

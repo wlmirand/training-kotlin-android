@@ -1,6 +1,10 @@
 package william.miranda.playground.instructor._Shared;
 
 public class CustomerJava {
+
+    private int id;
+    private String name;
+
     public CustomerJava(int id, String name) {
         this.id = id;
         this.name = name;
@@ -21,9 +25,4 @@ public class CustomerJava {
     public void setName(String name) {
         this.name = name;
     }
-
-    private int id;
-    private String name;
-
-
 }

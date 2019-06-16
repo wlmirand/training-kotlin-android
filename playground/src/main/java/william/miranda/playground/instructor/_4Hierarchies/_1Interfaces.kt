@@ -7,9 +7,10 @@ interface CustomerRepository {
         get() = true
 
     fun store(obj: Customer) {
-        // implement code to store
+        // some concrete implementation
     }
 
+    //This should be implemented by classes
     fun getById(id: Int): Customer
 }
 

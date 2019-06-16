@@ -1,7 +1,5 @@
 package william.miranda.playground.instructor._3Classes
 
-// similar to javaCode.Person
-
 class AnotherPerson(val name: String, val age: Int)
 
 fun main() {

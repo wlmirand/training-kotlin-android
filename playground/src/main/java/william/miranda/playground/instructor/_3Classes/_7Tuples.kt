@@ -5,10 +5,8 @@ fun main() {
 
     val countryAndCity = Pair("Spain", "Madrid")
 
-    countryAndCity.first
-    countryAndCity.component1()
+    println("${countryAndCity.first}, ${countryAndCity.second}")
 
     val countryAndCityAndContinent = Triple("Spain", "Madrid", "Europe")
-
-
+    println("${countryAndCityAndContinent.first}, ${countryAndCityAndContinent.second}, ${countryAndCityAndContinent.third}")
 }

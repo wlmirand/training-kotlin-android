@@ -1,6 +1,6 @@
 package william.miranda.playground.instructor._Shared
 
-import william.miranda.playground.instructor._11Generics.Repository
+import william.miranda.playground.instructor._8Generics.Repository
 
 class CustomerRepository<T> : Repository<T> {
     override fun getById(id: Int): T {

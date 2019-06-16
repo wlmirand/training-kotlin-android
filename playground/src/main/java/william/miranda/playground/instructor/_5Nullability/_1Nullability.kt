@@ -2,41 +2,15 @@ package william.miranda.playground.instructor._5Nullability
 
 fun main() {
 
+    //Always valid String
     val s1: String = "always not null"
-    val s2: String? = null
 
-    val i1: Int = s1.length
-    // s2.length
+    //This can be null
+    val s2: String? = "nullable string"
 
-    if (s2 != null) s2.length
-    s2?.length
+    //Length
+    val len1: Int = s1.length
+    val len2: Int? = s2?.length //note this can be NULL
 
-    val i2: Int? = if (s2 != null) s2.length else null
-    val i3: Int? = s2?.length
-
-    val i4: Int? = if (s2 != null) s2.length else 0
-    val i5: Int = s2?.length ?: 0
-
-    s2!!
-}
-
-fun test1(s: String?) {
-    if (s == null) return
-    s.length
-}
-
-fun test2(s: String?) {
-    if (s == null) fail()
-    s.length
-}
-
-fun test3(s: String?) {
-    val i: Int = s?.length ?: fail()
-}
-
-fun fail(): Nothing =
-        throw UnsupportedOperationException()
-
-fun notImplemented() {
-    TODO()
+    val len3: Int = s2?.length ?: 0//if s2 is null, we get a default
 }
