@@ -8,7 +8,7 @@ fun op(x: Int, op: (Int) -> Int): Int {
 
 fun main() {
 
-    op(3, { x -> x * x })
+    op(3) { x -> x * x }
 
     op(2, fun(x): Int {
 

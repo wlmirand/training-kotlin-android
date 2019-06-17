@@ -27,4 +27,5 @@ val albums = listOf(
         Album("Atom Heart Mother", 1970, 1, 55),
         Album("Ummagumma", 1969, 5, 74),
         Album("A Sauceful of Secrets", 1968, 9, 0),
-        Album("More", 1969, 9, 153))
+        Album("More", 1969, 9, 153)
+)

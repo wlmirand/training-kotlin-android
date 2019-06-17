@@ -43,7 +43,7 @@ fun updateWeather2(celsiusDegrees: Double): State {
 }
 
 fun anotherWhen(value: Int) {
-    val primes = arrayOf(1,2,3,5,7,11,13,17,19)
+    val primes = arrayOf(2,3,5,7,11,13,17,19)
 
     when(value) {
         0,1 -> println("value == 0 or value == 1")
@@ -60,16 +60,16 @@ fun recognize(c: Char) = when (c) {
 }
 
 fun forElements() {
-    val primes = arrayOf(1,2,3,5,7,11,13,17,19)
+    val primes = arrayOf(2,3,5,7,11,13,17,19)
 
     for (i in primes)
         println(i)
 }
 
 fun forIndex() {
-    val primes = arrayOf(1,2,3,5,7,11,13,17,19)
+    val primes = arrayOf(2,3,5,7,11,13,17,19)
 
-    for (i in 0..primes.size - 1)
+    for (i in 0 until primes.size)
         println(primes[i])
 }
 

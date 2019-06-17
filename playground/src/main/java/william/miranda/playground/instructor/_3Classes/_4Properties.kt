@@ -4,9 +4,9 @@ class AnotherRectangle(val height: Int, val width: Int) {
 
     // you can redefine getter (and setter)
     val isSquare: Boolean
-        get() {
-            return height == width
-        }
+        get() = height == width
+
+
 }
 
 fun main() {

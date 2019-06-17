@@ -1,11 +1,8 @@
 package william.miranda.playground.instructor._3Classes
 
-/* full syntax */
-class Person2 constructor(name: String) {
 
-    // property
-    val name: String = name
-}
+/* full syntax */
+class Person2 constructor(var name: String)
 
 /* short syntax */
 class Person1(val name: String)

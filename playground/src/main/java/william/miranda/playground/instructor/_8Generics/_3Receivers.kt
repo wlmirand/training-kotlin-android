@@ -1,5 +1,7 @@
 package william.miranda.playground.instructor._8Generics
 
+import javax.management.Notification
+
 class MyClass {
     lateinit var prop: String
 }
@@ -15,6 +17,7 @@ fun <T> T.scopedReceiver(lambda: T.() -> Unit): T {
 }
 
 fun main() {
+
     val myclass = MyClass().scopedObject {
         it.prop = "MyString"
     }

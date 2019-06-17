@@ -26,7 +26,7 @@ fun main() {
     sum2(1, 2, 3)
 
     // named arguments
-    sum3(b = 2, a = 1)
+    sum(c = 5, a = 7, b = 2)
 
     printMany(1, 2, 3, 4, 5)
 }

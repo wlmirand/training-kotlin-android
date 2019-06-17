@@ -3,7 +3,7 @@ package william.miranda.playground.instructor._9Stdlib
 import william.miranda.playground.instructor._Shared.albums
 
 fun main() {
-    val l1 = listOf<Int>(1,2,3,4,5,6,7,8,9,10)
+    val l1 = listOf(1,2,3,4,5,6,7,8,9,10)
     val l2 = mutableListOf<Int>()
 
     val s1 = setOf<Int>()
@@ -17,5 +17,5 @@ fun main() {
 
     //l1.forEach { println(it) }
 
-    albums.filter { it.year < 1970 }.forEach { println(it) }
+    albums.sortedByDescending { it.title }.forEach { println(it) }
 }

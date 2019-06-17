@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_home.*
+import org.koin.android.viewmodel.ext.android.viewModel
 import william.miranda.kotlintraining.R
 import william.miranda.kotlintraining.data.post.Post
 
@@ -16,7 +18,7 @@ class HomeFragment : Fragment() {
     /**
      * Presenter
      */
-    private val presenter = HomePresenter(this)
+    private val viewModel: HomeViewModel by viewModel()
 
     /**
      * Android callback to Render the Layout
@@ -43,7 +45,12 @@ class HomeFragment : Fragment() {
      */
     override fun onResume() {
         super.onResume()
-        presenter.getAllPosts()
+        viewModel.posts.observe(this, object : Observer<List<Post>> {
+            override fun onChanged(t: List<Post>?) {
+                t?.let { updatePosts(it) }
+            }
+
+        })
     }
 
     /**

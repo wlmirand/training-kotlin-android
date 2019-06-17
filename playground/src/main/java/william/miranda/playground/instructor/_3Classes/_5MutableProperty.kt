@@ -1,7 +1,7 @@
 package william.miranda.playground.instructor._3Classes
 
 class LengthCounter {
-    var counter: Int = 0
+    var counter = 0
         private set
 
     fun addWord(word: String) {

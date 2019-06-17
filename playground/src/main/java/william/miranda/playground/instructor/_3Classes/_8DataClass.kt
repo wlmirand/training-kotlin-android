@@ -8,7 +8,7 @@ data class Person(
 
 fun main() {
     val person1 = Person("Alice", 21)
-    val person2 = Person("Alice", 21)
+    val person2 = Person("Alice", 22)
     println(person1)
     println(person1 == person2)
 }

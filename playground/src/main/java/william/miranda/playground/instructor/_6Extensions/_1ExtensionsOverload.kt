@@ -10,6 +10,7 @@ fun Int.factorial(): Int {
     return result
 }
 
+
 //Custom operator overload
 data class Fraction(val numerator: Int, val denominator: Int) {
 
@@ -29,6 +30,7 @@ data class Fraction(val numerator: Int, val denominator: Int) {
 fun main() {
     println(5.factorial())
 
+
     val number = 6
     println(number.factorial())
 
@@ -37,4 +39,6 @@ fun main() {
 
     println(f1 + f2)
     println(f1 cross f2)
+
+    f1.cross(f2)
 }
