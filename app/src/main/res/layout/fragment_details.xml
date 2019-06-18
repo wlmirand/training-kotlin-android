@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/postId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <!-- Our layout will have a variable -->
+    <data>
+        <variable name="viewModel" type="william.miranda.kotlintraining.ui.details.DetailsViewModel"/>
+    </data>
 
-    <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/userId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/postId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{ @string/string_id(viewModel.post.id) }"/>
 
-    <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/body"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/userId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@{ @string/string_userId(viewModel.post.userId) }"/>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@{ @string/string_title(viewModel.post.title) }"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@{ @string/string_body(viewModel.post.body) }"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

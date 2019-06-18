@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">KotlinTraining</string>
+
+    <string name="string_id">Id: %1$d</string>
+    <string name="string_userId">User Id: %1$d</string>
+    <string name="string_title">Title: %1$s</string>
+    <string name="string_body">Body: %1$s</string>
 </resources>
