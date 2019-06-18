@@ -11,6 +11,26 @@
             android:id="@+id/homeFragment"
             android:name="william.miranda.kotlintraining.ui.home.HomeFragment"
             android:label="Home Fragment"
-            tools:layout="@layout/fragment_home"/>
+            tools:layout="@layout/fragment_home">
 
+        <!-- Instead of manually setting the Destination, we let the Android
+            Create the methods to navigate for us.
+        -->
+        <action
+                android:id="@+id/action_to_detailsFragment"
+                app:destination="@id/detailsFragment"/>
+    </fragment>
+
+    <!-- Detail Fragment -->
+    <fragment
+            android:id="@+id/detailsFragment"
+            android:name="william.miranda.kotlintraining.ui.details.DetailsFragment"
+            android:label="Detail Fragment"
+            tools:layout="@layout/fragment_details">
+
+        <!-- To display One Post, we need to know its ID, so when Navigating we pass it as a parameter
+            If we use the Android <action>, the Navigation Library will create the methods for us -->
+        <argument android:name="postId" app:argType="integer"/>
+
+    </fragment>
 </navigation>

@@ -4,11 +4,12 @@ import androidx.lifecycle.ViewModel
 import william.miranda.kotlintraining.data.post.PostRepository
 
 /**
- * Presenter class for HomeFragment
+ * ViewModel class for HomeFragment
  */
-class HomeViewModel(
-    private val postRepository: PostRepository
-): ViewModel() {
+class HomeViewModel(postRepository: PostRepository): ViewModel() {
 
+    /**
+     * Expose the LiveData coming from the Repository
+     */
     val posts = postRepository.getAll()
 }

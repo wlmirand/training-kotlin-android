@@ -12,7 +12,8 @@ import william.miranda.kotlintraining.data.post.Post
  * Adapter to provide data to RecyclerView
  */
 class PostAdapter(
-    private val data: MutableList<Post> = mutableListOf()
+    private val data: MutableList<Post> = mutableListOf(),
+    private val clickListener: (Int) -> Unit
 ): RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
 
     /**
@@ -55,6 +56,7 @@ class PostAdapter(
         fun setData(data: Post) {
             itemView.title.text = data.title
             itemView.body.text = data.body
+            itemView.setOnClickListener { clickListener(data.id) }
         }
     }
 }

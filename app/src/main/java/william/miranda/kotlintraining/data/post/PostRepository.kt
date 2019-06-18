@@ -40,4 +40,11 @@ class PostRepository(
         //Return what we have locally
         return postDao.getAll()
     }
+
+    /**
+     * Expose one Saved Post
+     */
+    fun get(postId: Int): LiveData<Post> {
+        return postDao.get(postId)
+    }
 }

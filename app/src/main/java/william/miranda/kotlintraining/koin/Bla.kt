@@ -8,6 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import william.miranda.kotlintraining.api.PostApi
 import william.miranda.kotlintraining.data.AppDatabase
 import william.miranda.kotlintraining.data.post.PostRepository
+import william.miranda.kotlintraining.ui.details.DetailsViewModel
 import william.miranda.kotlintraining.ui.home.HomeViewModel
 
 val koinModules =  module {
@@ -34,4 +35,6 @@ val koinModules =  module {
     single { PostRepository(get(), get()) }
 
     viewModel { HomeViewModel(get()) }
+    //Note we have one parameter that we pass instead of the "get()"
+    viewModel { (postId: Int) -> DetailsViewModel(postId, get()) }
 }
