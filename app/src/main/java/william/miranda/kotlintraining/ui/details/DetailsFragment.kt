@@ -41,10 +41,10 @@ class DetailsFragment: Fragment() {
         //Observe data and set the Views
         viewModel.post.observe({ viewLifecycleOwner.lifecycle }) {
             it?.let {
-                postId.text = "PostID: ${it.id}"
-                userId.text = "UserID: ${it.userId}"
-                title.text = "Post Title: ${it.title}"
-                body.text = "Post Body: ${it.body}"
+                postId.text = "ID: ${it.id}"
+                userId.text = "User ID: ${it.userId}"
+                title.text = "Title: ${it.title}"
+                body.text = "Body: ${it.body}"
             }
         }
     }
